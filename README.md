@@ -1,7 +1,7 @@
 # Project Mobile Apps
  Mind Notes Application By Aldi Renaldi W
  --
-*Mind Notes* It is an application that helps users easily organize activity.
+**Mind Notes** It is an application that helps users easily organize activity.
 
 ©️Aldi R - v1.0.0
 
@@ -14,5 +14,8 @@
 5. [Application](#Application)
 6. [Scheme](#Scheme)
 7. [User Interface](#User-Interface)
+
 ---
 
+###Introduction
+   Mind Notes is an application that is made to make it easier for users to take daily notes in all activities. This is an application made for the first time by Aldi Renaldi students with NIM (312310812) as a midterm exam project until the final semester exam by Mr. Donny Maulana, S.Kom., M.M.S.I., at Pelita Bangsa University
