@@ -6,13 +6,14 @@
 ©️Aldi R - v1.0.0
 
 ---
-[Introduction](#Introduction)
-[Main Story](#Main-Story)
-[Storyboard](#Storyboard)
-[Theme](#Theme)
-[Application](#Application)
-[Scheme](#Scheme)
-[User Interface](#User-Interface)
+## The Content Table
+1. [Introduction](#Introduction)
+2. [Main Story](#Main-Story)
+3. [Storyboard](#Storyboard)
+4. [Theme](#Theme)
+5. [Application](#Application)
+6. [Scheme](#Scheme)
+7. [User Interface](#User-Interface)
 
 ---
 
