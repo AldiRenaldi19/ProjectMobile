@@ -24,5 +24,8 @@ Mind Notes is an application that is made to make it easier for users to take da
 As an effort to do the assignment, the following is the progress story of the application that will be created. The application process is in the stage of creating layouts and splash screens.
 
 ### Storyboard
-[Storyboard](https://github.com/AldiRenaldi19/ProjectMobile/blob/3089391036ce19bfa29f9e7d36497cd05fce7168/User%20Interface/STORYBOARD.png)
+
+**Storyboard**
+As an effort to do the assignment, the following is the progress story of the application that will be created. The application process is in the stage of creating layouts and splash screens.
+![Storyboard](https://github.com/AldiRenaldi19/ProjectMobile/blob/3089391036ce19bfa29f9e7d36497cd05fce7168/User%20Interface/STORYBOARD.png)
 
