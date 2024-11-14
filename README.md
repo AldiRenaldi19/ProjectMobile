@@ -7,7 +7,7 @@
 
 ---
 ## The Content Table
-1. [Introduction](#Introduction)
+1. -[Introduction](#Introduction)-
 2. [Main Story](#Main-Story)
 3. [Storyboard](#Storyboard)
 4. [Theme](#Theme)
