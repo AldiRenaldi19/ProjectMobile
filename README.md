@@ -3,7 +3,7 @@
  --
 **Mind Notes** It is an application that helps users easily organize activity.
 
-*©️MIndNotes* - 2024 v1.0.0
+*©️MindNotes* - 2024 v1.0.0
 
 ---
 ## The Content Table
