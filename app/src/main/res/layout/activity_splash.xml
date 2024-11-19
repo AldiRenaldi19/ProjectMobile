@@ -9,6 +9,7 @@
     android:background="@color/white">
     
     <ImageView
+        android:id="@+id/Splash"
         android:layout_width="320dp"
         android:layout_height="310dp"
         android:src="@drawable/logo"
