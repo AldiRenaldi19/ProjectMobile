@@ -9,6 +9,7 @@
     android:background="@color/white">
     
     <ImageView
+        android:id="@+id/splashscreen"
         android:layout_width="320dp"
         android:layout_height="310dp"
         android:src="@drawable/logo"
@@ -16,7 +17,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
