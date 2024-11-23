@@ -2,26 +2,95 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterActivity" >
 
     <TextView
-        android:id="@+id/namaPanjangLabel"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nama Panjang"
-        android:textColor="@android:color/black"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="Daftar Akun Baru"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="110dp"/>
+
     <EditText
-        android:layout_width="0dp"
+        android:id="@+id/namaPanjang"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:background="@color/black"
+        android:textColorHint="@color/white"
+        android:hint="Nama Panjang"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/nomorTelepon"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:background="@color/black"
+        android:textColorHint="@color/white"
+        android:hint="Nomor Telepon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/namaPanjang" />
+
+    <EditText
+        android:id="@+id/alamatEmail"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:background="@color/black"
+        android:textColorHint="@color/white"
+        android:hint="Alamat Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/nomorTelepon" />
+
+    <EditText
+        android:id="@+id/kataSandi"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:background="@color/black"
+        android:textColorHint="@color/white"
+        android:hint="Kata Sandi"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/alamatEmail" />
+
+    <Button
+        android:id="@+id/daftar"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:hint="Masukan Nama Panjang"
+        android:text="DAFTAR"
+        android:textColor="@color/white"
+        android:background="@drawable/button"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kataSandi" />
 
-
-
+    <TextView
+        android:id="@+id/sudahMemilikiAkun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sudah punya akun? Masuk"
+        android:layout_marginTop="16dp"
+        android:textColor ="@android:color/holo_blue_dark"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daftar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.mindnotes
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -27,6 +28,9 @@ class LoginActivity : AppCompatActivity() {
         buttonMasuk.setOnClickListener {
             val AlamatEmail = AlamatEmailEditText.text.toString()
             val KataSandi = KataSandiEditText.text.toString()
+            // Menuju Register Screen
+            val  intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
 
             // Logika Sederhana untuk Login
             if (AlamatEmail == "admin" && KataSandi == "password") {
