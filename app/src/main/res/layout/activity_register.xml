@@ -21,7 +21,7 @@
 
     <EditText
         android:id="@+id/namaPanjang"
-        android:layout_width="350dp"
+        android:layout_width="345dp"
         android:layout_height="35dp"
         android:background="@color/black"
         android:textColorHint="@color/white"
@@ -33,7 +33,7 @@
 
     <EditText
         android:id="@+id/nomorTelepon"
-        android:layout_width="350dp"
+        android:layout_width="345dp"
         android:layout_height="35dp"
         android:background="@color/black"
         android:textColorHint="@color/white"
@@ -45,7 +45,7 @@
 
     <EditText
         android:id="@+id/alamatEmail"
-        android:layout_width="350dp"
+        android:layout_width="345dp"
         android:layout_height="35dp"
         android:background="@color/black"
         android:textColorHint="@color/white"
@@ -58,7 +58,7 @@
 
     <EditText
         android:id="@+id/kataSandi"
-        android:layout_width="350dp"
+        android:layout_width="345dp"
         android:layout_height="35dp"
         android:background="@color/black"
         android:textColorHint="@color/white"

@@ -28,11 +28,11 @@ class RegisterActivity : AppCompatActivity() {
         sudahMemilikiAkun = findViewById(R.id.sudahMemilikiAkun)
 
         daftar.setOnClickListener {
-            // TODO: Implement logic for registering new account
+            // Menerapkan logika untuk mendaftarkan akun baru
         }
 
         sudahMemilikiAkun.setOnClickListener {
-            // TODO: Implement logic for navigating to login screen
+            // Menerapkan logika untuk menavigasi ke layar login
         }
     }
 }

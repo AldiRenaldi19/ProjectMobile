@@ -28,8 +28,8 @@ class LoginActivity : AppCompatActivity() {
         buttonMasuk.setOnClickListener {
             val AlamatEmail = AlamatEmailEditText.text.toString()
             val KataSandi = KataSandiEditText.text.toString()
-            // Menuju Register Screen
-            val  intent = Intent(this, RegisterActivity::class.java)
+            // Logika Menuju Home Screen
+            val  intent = Intent(this, HomeScreenActivity::class.java)
             startActivity(intent)
 
             // Logika Sederhana untuk Login
