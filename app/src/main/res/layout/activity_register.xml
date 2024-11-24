@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity" >
+
+    <TextView
+        android:id="@+id/daftarAkun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daftar Akun Baru"
+        android:gravity="center"
+        android:layout_margin="100dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/namaPanjang"
+        android:layout_width="345dp"
+        android:layout_height="35dp"
+        android:layout_margin="150dp"
+        android:background="@color/black"
+        android:textColorHint="@color/white"
+        android:hint="Nama Panjang"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/daftarAkun" />
+
+    <EditText
+        android:id="@+id/nomorTelepon"
+        android:layout_width="345dp"
+        android:layout_height="35dp"
+        android:layout_margin="10dp"
+        android:background="@color/black"
+        android:textColorHint="@color/white"
+        android:hint="Nomor Telepon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/namaPanjang" />
+
+    <EditText
+        android:id="@+id/alamatEmail"
+        android:layout_width="345dp"
+        android:layout_height="35dp"
+        android:layout_margin="10dp"
+        android:background="@color/black"
+        android:textColorHint="@color/white"
+        android:hint="Alamat Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/nomorTelepon" />
+
+    <EditText
+        android:id="@+id/kataSandi"
+        android:layout_width="345dp"
+        android:layout_height="35dp"
+        android:layout_margin="10dp"
+        android:background="@color/black"
+        android:textColorHint="@color/white"
+        android:hint="Kata Sandi"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/alamatEmail" />
+
+    <Button
+        android:id="@+id/daftar"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="DAFTAR"
+        android:textColor="@color/white"
+        android:background="@drawable/button"
+       android:layout_margin="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kataSandi" />
+
+    <TextView
+        android:id="@+id/sudahMemilikiAkun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sudah punya akun? Masuk"
+        android:layout_margin="75dp"
+        android:layout_marginTop="16dp"
+        android:textColor ="@android:color/holo_blue_dark"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daftar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
