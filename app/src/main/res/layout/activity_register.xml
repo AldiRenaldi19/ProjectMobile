@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:text="Daftar Akun Baru"
         android:gravity="center"
+        android:textColor="@color/black"
         android:layout_margin="100dp"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -24,54 +25,62 @@
         android:layout_width="345dp"
         android:layout_height="35dp"
         android:layout_margin="150dp"
-        android:background="@color/black"
-        android:textColorHint="@color/white"
+        android:background="@drawable/buttonuser"
+        android:gravity="center"
         android:hint="Nama Panjang"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/daftarAkun" />
+        app:layout_constraintTop_toBottomOf="@+id/daftarAkun"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/nomorTelepon"
         android:layout_width="345dp"
         android:layout_height="35dp"
         android:layout_margin="10dp"
-        android:background="@color/black"
-        android:textColorHint="@color/white"
+        android:background="@drawable/buttonuser"
+        android:gravity="center"
         android:hint="Nomor Telepon"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/namaPanjang" />
+        app:layout_constraintTop_toBottomOf="@+id/namaPanjang"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/alamatEmail"
         android:layout_width="345dp"
         android:layout_height="35dp"
         android:layout_margin="10dp"
-        android:background="@color/black"
-        android:textColorHint="@color/white"
+        android:background="@drawable/buttonuser"
+        android:gravity="center"
         android:hint="Alamat Email"
         android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/nomorTelepon" />
+        app:layout_constraintTop_toBottomOf="@+id/nomorTelepon"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/kataSandi"
         android:layout_width="345dp"
         android:layout_height="35dp"
         android:layout_margin="10dp"
-        android:background="@color/black"
-        android:textColorHint="@color/white"
+        android:background="@drawable/buttonuser"
+        android:gravity="center"
         android:hint="Kata Sandi"
         android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/alamatEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/alamatEmail"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/daftar"
@@ -80,7 +89,7 @@
         android:text="DAFTAR"
         android:textColor="@color/white"
         android:background="@drawable/button"
-       android:layout_margin="100dp"
+        android:layout_margin="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/kataSandi" />
@@ -89,13 +98,15 @@
         android:id="@+id/sudahMemilikiAkun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sudah punya akun? Masuk"
         android:layout_margin="75dp"
         android:layout_marginTop="16dp"
-        android:textColor ="@android:color/holo_blue_dark"
         android:clickable="true"
         android:focusable="true"
+        android:text="Sudah punya akun? Masuk"
+        android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/daftar" />
+        app:layout_constraintTop_toBottomOf="@+id/daftar"
+        tools:ignore="TouchTargetSizeCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

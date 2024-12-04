@@ -68,7 +68,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="90dp"
         android:background="@drawable/button"
-        android:onClick="MULAI"
         android:text="MULAI"
         android:textColor="@color/white"
         android:textSize="15sp"
