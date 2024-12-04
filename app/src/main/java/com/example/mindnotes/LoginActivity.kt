@@ -4,17 +4,17 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var AlamatEmailEditText : EditText
     private lateinit var KataSandiEditText : EditText
     private lateinit var buttonMasuk : Button
+    private lateinit var lupaPasswordTextView: TextView
+    private lateinit var daftarAkunBaruTextView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,13 +24,25 @@ class LoginActivity : AppCompatActivity() {
         AlamatEmailEditText = findViewById(R.id.AlamatEmail)
         KataSandiEditText = findViewById(R.id.KataSandi)
         buttonMasuk = findViewById(R.id.buttonMasuk)
+        lupaPasswordTextView = findViewById(R.id.lupaPassword)
+        daftarAkunBaruTextView = findViewById(R.id.daftarAkunBaru)
+
+        daftarAkunBaruTextView.setOnClickListener{
+            val intent = Intent (this, RegisterActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        lupaPasswordTextView.setOnClickListener {
+            val lupaPassword = lupaPasswordTextView.text.toString()
+        }
 
         buttonMasuk.setOnClickListener {
             val AlamatEmail = AlamatEmailEditText.text.toString()
             val KataSandi = KataSandiEditText.text.toString()
             // Logika Menuju Home Screen
-            val  intent = Intent(this, HomeScreenActivity::class.java)
-            startActivity(intent)
+            val  Intent = Intent(this, HomeScreenActivity::class.java)
+            startActivity(Intent)
 
             // Logika Sederhana untuk Login
             if (AlamatEmail == "admin" && KataSandi == "password") {
@@ -38,11 +50,6 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Username atau Password Salah", Toast.LENGTH_SHORT).show()
             }
-        }
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
         }
     }
 }

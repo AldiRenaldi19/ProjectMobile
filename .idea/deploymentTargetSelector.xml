@@ -8,9 +8,6 @@
       <SelectionState runConfigName="SplashScreen">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="Mind Notes.Mind_Notes.app">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
     </selectionStates>
   </component>
 </project>

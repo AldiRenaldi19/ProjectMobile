@@ -3,6 +3,7 @@ package com.example.mindnotes
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
@@ -18,9 +19,12 @@ class MainActivity : AppCompatActivity() {
         menujuLoginScreen = findViewById(R.id.menujuLoginScreen)
 
         menujuLoginScreen.setOnClickListener {
-            // Intent Menuju Login Screen
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+            // Intent Login Screen
+            val menujuLoginScreen = menujuLoginScreen.toString()
+            val Intent = Intent(this, LoginActivity::class.java)
+            startActivity(Intent)
+            finish()
+            Toast.makeText(this, "SELAMAT DATANG", Toast.LENGTH_SHORT).show()
         }
     }
 }
