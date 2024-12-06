@@ -22,12 +22,13 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/inputfile"
+        app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.94"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        tools:layout_editor_absoluteY="54dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageView" />
 
     <View
+        android:id="@+id/view"
         android:layout_width="380dp"
         android:layout_height="2dp"
         android:layout_marginTop="2dp"

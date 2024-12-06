@@ -40,14 +40,24 @@ class LoginActivity : AppCompatActivity() {
         buttonMasuk.setOnClickListener {
             val AlamatEmail = AlamatEmailEditText.text.toString()
             val KataSandi = KataSandiEditText.text.toString()
-            // Logika Menuju Home Screen
-            val  Intent = Intent(this, HomeScreenActivity::class.java)
-            startActivity(Intent)
 
             // Logika Sederhana untuk Login
-            if (AlamatEmail == "admin" && KataSandi == "password") {
+            // Di sini Anda dapat memeriksa kredensial Anda
+            // Misalnya, memeriksa apakah alamat email dan kata sandi cocok dengan data yang benar.
+            if (AlamatEmail == "admin" && KataSandi == "admin") {
+                // Simpan informasi login ke SharedPreferences
+                val sharedPreferences = getSharedPreferences("LoginPrefs", MODE_PRIVATE)
+                val editor = sharedPreferences.edit()
+                editor.putBoolean("isLoggedIn", true)
+                editor.apply()
+
+                // Jika Login Berhasil, tampilkan pesan sukses
+                val intent = Intent(this, HomeScreenActivity::class.java)
+                startActivity(intent)
                 Toast.makeText(this, "Login Berhasil", Toast.LENGTH_SHORT).show()
             } else {
+                // Jika Login Gagal, tampilkan pesan kesalahan
+                Toast.makeText(this, "Login Gagal", Toast.LENGTH_SHORT).show()
                 Toast.makeText(this, "Username atau Password Salah", Toast.LENGTH_SHORT).show()
             }
         }
