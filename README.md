@@ -29,3 +29,10 @@ As an effort to do the assignment, the following is the progress story of the ap
 As an effort to do the assignment, the following is the progress story of the application that will be created. The application process is in the stage of creating layouts and splash screens.
 ![Storyboard](https://github.com/AldiRenaldi19/ProjectMobile/blob/3089391036ce19bfa29f9e7d36497cd05fce7168/User%20Interface/STORYBOARD.png)
 
+### Theme
+
+### Application
+
+### Scheme
+
+### User Interface
