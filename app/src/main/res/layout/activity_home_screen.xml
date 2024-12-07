@@ -19,13 +19,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/inputFileButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/inputfile"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.94"
-        app:layout_constraintStart_toEndOf="@+id/imageView" />
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <View
         android:id="@+id/view"

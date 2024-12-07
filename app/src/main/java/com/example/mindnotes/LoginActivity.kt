@@ -8,6 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var AlamatEmailEditText : EditText
@@ -54,6 +55,7 @@ class LoginActivity : AppCompatActivity() {
                 // Jika Login Berhasil, tampilkan pesan sukses
                 val intent = Intent(this, HomeScreenActivity::class.java)
                 startActivity(intent)
+                finish()
                 Toast.makeText(this, "Login Berhasil", Toast.LENGTH_SHORT).show()
             } else {
                 // Jika Login Gagal, tampilkan pesan kesalahan

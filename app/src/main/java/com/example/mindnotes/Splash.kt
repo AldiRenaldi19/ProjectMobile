@@ -14,12 +14,12 @@ class Splash : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_splash)
-//         Membuat tampilan fullscreen
+        //menghapus status bar
         window.setFlags(
             FLAG_FULLSCREEN,
             FLAG_FULLSCREEN
         )
-//       menggunakan postDelayed (Runnable, Time)
+        //menggunakan postDelayed (Runnable, Time)
         Handler().postDelayed({
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
