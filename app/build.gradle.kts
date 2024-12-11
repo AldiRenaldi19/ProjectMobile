@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.mindnotes"
+    namespace = "com.mindmap.mindnotes"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.mindnotes"
+        applicationId = "com.mindmap.mindnotes"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

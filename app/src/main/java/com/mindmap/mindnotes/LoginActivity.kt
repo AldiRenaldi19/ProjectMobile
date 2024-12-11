@@ -14,7 +14,6 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var AlamatEmailEditText : EditText
     private lateinit var KataSandiEditText : EditText
     private lateinit var buttonMasuk : Button
-    private lateinit var lupaPasswordTextView: TextView
     private lateinit var daftarAkunBaruTextView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,17 +24,12 @@ class LoginActivity : AppCompatActivity() {
         AlamatEmailEditText = findViewById(R.id.AlamatEmail)
         KataSandiEditText = findViewById(R.id.KataSandi)
         buttonMasuk = findViewById(R.id.buttonMasuk)
-        lupaPasswordTextView = findViewById(R.id.lupaPassword)
         daftarAkunBaruTextView = findViewById(R.id.daftarAkunBaru)
 
         daftarAkunBaruTextView.setOnClickListener{
             val intent = Intent (this, RegisterActivity::class.java)
             startActivity(intent)
             finish()
-        }
-
-        lupaPasswordTextView.setOnClickListener {
-            val lupaPassword = lupaPasswordTextView.text.toString()
         }
 
         buttonMasuk.setOnClickListener {

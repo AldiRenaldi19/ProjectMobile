@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.mindmaplibrary"
+    namespace = "com.mindmap.mindmaplibrary"
     compileSdk = 35
 
     defaultConfig {
