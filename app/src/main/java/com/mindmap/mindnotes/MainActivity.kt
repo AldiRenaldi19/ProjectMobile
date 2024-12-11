@@ -1,4 +1,4 @@
-package com.example.mindnotes
+package com.mindmap.mindnotes
 
 import android.content.Intent
 import android.os.Bundle

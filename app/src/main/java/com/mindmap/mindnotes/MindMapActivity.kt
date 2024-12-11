@@ -1,4 +1,4 @@
-package com.example.mindnotes
+package com.mindmap.mindnotes
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

@@ -1,4 +1,4 @@
-package com.example.mindnotes
+package com.mindmap.mindnotes
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
