@@ -18,7 +18,7 @@ class HomeScreenActivity : AppCompatActivity() {
         inputFileButton = findViewById(R.id.inputFileButton)
 
         inputFileButton.setOnClickListener {
-            val intent = Intent(this, MindMapActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }

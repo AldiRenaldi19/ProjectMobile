@@ -7,14 +7,14 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class MainScreenActivity : AppCompatActivity() {
 
     private lateinit var menujuLoginScreen: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_screen)
 
         menujuLoginScreen = findViewById(R.id.menujuLoginScreen)
 
