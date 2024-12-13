@@ -14,6 +14,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var AlamatEmailEditText : EditText
     private lateinit var KataSandiEditText : EditText
     private lateinit var buttonMasuk : Button
+
     private lateinit var daftarAkunBaruTextView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +25,7 @@ class LoginActivity : AppCompatActivity() {
         AlamatEmailEditText = findViewById(R.id.AlamatEmail)
         KataSandiEditText = findViewById(R.id.KataSandi)
         buttonMasuk = findViewById(R.id.buttonMasuk)
+
         daftarAkunBaruTextView = findViewById(R.id.daftarAkunBaru)
 
         daftarAkunBaruTextView.setOnClickListener{
@@ -31,6 +33,7 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
 
         buttonMasuk.setOnClickListener {
             val AlamatEmail = AlamatEmailEditText.text.toString()

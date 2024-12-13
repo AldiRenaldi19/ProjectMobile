@@ -1,5 +1,6 @@
 package com.mindmap.mindnotes
 
+
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -11,10 +12,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        menujuLoginScreen = findViewById(R.id.menujuLoginScreen)
+
+        menujuLoginScreen.setOnClickListener {
+            // Intent Login Screen
+            val menujuLoginScreen = menujuLoginScreen.toString()
+            val Intent = Intent(this, LoginActivity::class.java)
+            startActivity(Intent)
+            finish()
+            Toast.makeText(this, "SELAMAT DATANG", Toast.LENGTH_SHORT).show()
+
         }
     }
 }
