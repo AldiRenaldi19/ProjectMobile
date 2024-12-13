@@ -22,4 +22,11 @@ class HomeScreenActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+        inputFileButton.isEnabled = true
+    }
+
+
 }
