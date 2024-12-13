@@ -13,8 +13,8 @@
         android:theme="@style/Theme.MindNotes"
         tools:targetApi="31">
         <activity
-            android:name=".MindMapActivity"
-            android:exported="true" />
+            android:name=".MainActivity"
+            android:exported="false" />
         <activity
             android:name=".HomeScreenActivity"
             android:exported="true" />
@@ -25,7 +25,7 @@
             android:name=".LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainScreenActivity"
             android:exported="true" />
         <activity
             android:name=".Splash"
