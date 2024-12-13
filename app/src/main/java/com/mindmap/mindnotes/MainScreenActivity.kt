@@ -20,7 +20,6 @@ class MainScreenActivity : AppCompatActivity() {
 
         menujuLoginScreen.setOnClickListener {
             // Intent Login Screen
-            val menujuLoginScreen = menujuLoginScreen.toString()
             val Intent = Intent(this, LoginActivity::class.java)
             startActivity(Intent)
             finish()
