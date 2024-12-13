@@ -13,16 +13,5 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        menujuLoginScreen = findViewById(R.id.menujuLoginScreen)
-
-        menujuLoginScreen.setOnClickListener {
-            // Intent Login Screen
-            val menujuLoginScreen = menujuLoginScreen.toString()
-            val Intent = Intent(this, LoginActivity::class.java)
-            startActivity(Intent)
-            finish()
-            Toast.makeText(this, "SELAMAT DATANG", Toast.LENGTH_SHORT).show()
-
         }
     }
-}
