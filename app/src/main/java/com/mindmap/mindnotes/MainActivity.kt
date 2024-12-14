@@ -36,6 +36,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onStart() {
+        super.onStart()
+    }
+
+
+
     private fun addNode(text: String) {
         val newNode = MindMapNode(text = text)
         mindMapNodes.add(newNode)
