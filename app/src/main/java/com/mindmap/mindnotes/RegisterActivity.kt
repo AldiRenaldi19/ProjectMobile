@@ -10,10 +10,10 @@ import android.widget.Toast
 
 class RegisterActivity : AppCompatActivity() {
 
-    private lateinit var namaPanjangEditText: EditText
-    private lateinit var nomorTeleponEditText: EditText
-    private lateinit var alamatEmailEditText: EditText
-    private lateinit var kataSandiEditText: EditText
+    private lateinit var editTextnamaPanjang: EditText
+    private lateinit var editTextnomorTelepon: EditText
+    private lateinit var editTextalamatEmail: EditText
+    private lateinit var editTextkataSandi: EditText
     private lateinit var daftar: Button
     private lateinit var sudahMemilikiAkun: TextView
 
@@ -21,21 +21,20 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        namaPanjangEditText = findViewById(R.id.namaPanjang)
-        nomorTeleponEditText = findViewById(R.id.nomorTelepon)
-        alamatEmailEditText = findViewById(R.id.alamatEmail)
-        kataSandiEditText = findViewById(R.id.kataSandi)
+        editTextnamaPanjang = findViewById(R.id.namaPanjang)
+        editTextnomorTelepon = findViewById(R.id.nomorTelepon)
+        editTextalamatEmail = findViewById(R.id.alamatEmail)
+        editTextkataSandi = findViewById(R.id.kataSandi)
         daftar = findViewById(R.id.daftar)
         sudahMemilikiAkun = findViewById(R.id.sudahMemilikiAkun)
 
         daftar.setOnClickListener {
 
             // Menerapkan logika untuk mendaftarkan akun baru
-            val namaPanjang = namaPanjangEditText.text.toString()
-            val nomorTelepon = nomorTeleponEditText.toString()
-            val alamatEmail = alamatEmailEditText.toString()
-            val kataSandi = kataSandiEditText.toString()
-            val daftar = daftar.toString()
+            val namaPanjang = editTextnamaPanjang.text.toString()
+            val nomorTelepon = editTextnomorTelepon.toString()
+            val alamatEmail = editTextalamatEmail.toString()
+            val kataSandi = editTextkataSandi.toString()
 
             if (namaPanjang.isEmpty() || nomorTelepon.isEmpty() || alamatEmail.isEmpty() || kataSandi.isEmpty()) {
                 Toast.makeText(this, "Mohon isi semua kolom", Toast.LENGTH_SHORT).show()
@@ -45,7 +44,7 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this, "Kata sandi minimal 8 karakter", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            if (!alamatEmail.contains("@")) {
+            if (!alamatEmail.contains("@") || !alamatEmail.contains(".com") || !alamatEmail.contains(".")) {
                 Toast.makeText(this, "Alamat email tidak valid", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
@@ -62,25 +61,25 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this, "Nama panjang minimal 3 karakter", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             } else {
-                val namaPanjang = namaPanjangEditText.text.toString()
-                val nomorTelepon = nomorTeleponEditText.text.toString()
-                val alamatEmail = alamatEmailEditText.text.toString()
-                val kataSandi = kataSandiEditText.text.toString()
-                val daftar = daftar.toString()
+                val namapanjang = editTextnamaPanjang.text.toString()
+                val nomortelepon = editTextnomorTelepon.text.toString()
+                val alamatemail = editTextalamatEmail.text.toString()
+                val katasandi = editTextkataSandi.text.toString()
                 val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
                 val editor = sharedPreferences.edit()
 
                 // Simpan data pendaftaran ke SharedPreferences
-                editor.putString("namaPanjang", namaPanjang)
-                editor.putString("nomorTelepon", nomorTelepon)
-                editor.putString("alamatEmail", alamatEmail)
-                editor.putString("kataSandi", kataSandi)
+                editor.putString("namaPanjang", namapanjang)
+                editor.putString("nomorTelepon", nomortelepon)
+                editor.putString("alamatEmail", alamatemail)
+                editor.putString("kataSandi", katasandi)
+                editor.putBoolean("isLoggedIn", true)
                 editor.apply()
 
                 // Logika menuju ke Home Screen
-                val Intent = Intent(this, HomeScreenActivity::class.java)
+                val intent = Intent(this, HomeScreenActivity::class.java)
                 Toast.makeText(this, "Pendaftaran Berhasil", Toast.LENGTH_SHORT).show()
-                startActivity(Intent)
+                startActivity(intent)
                 finish()
             }
         }
@@ -90,12 +89,9 @@ class RegisterActivity : AppCompatActivity() {
         sudahMemilikiAkun.setOnClickListener {
 
             // Menerapkan logika untuk menavigasi ke layar login
-            val sudahMemilikiAkun = sudahMemilikiAkun.toString()
-            val daftar = daftar.toString()
-
             // Logika menuju ke Login Screen
-            val Intent = Intent(this, LoginActivity::class.java)
-            startActivity(Intent)
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
             finish()
         }
     }

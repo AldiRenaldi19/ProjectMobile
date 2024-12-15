@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
 class MainScreenActivity : AppCompatActivity() {
@@ -19,14 +18,10 @@ class MainScreenActivity : AppCompatActivity() {
 
         menujuLoginScreen.setOnClickListener {
             // Intent Login Screen
-            val Intent = Intent(this, LoginActivity::class.java)
-            startActivity(Intent)
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
             finish()
             Toast.makeText(this, "SELAMAT DATANG", Toast.LENGTH_SHORT).show()
         }
-    }
-    override fun onResume() {
-        super.onResume()
-        menujuLoginScreen.isEnabled = true
     }
 }

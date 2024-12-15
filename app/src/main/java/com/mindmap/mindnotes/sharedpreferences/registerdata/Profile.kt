@@ -1,9 +1,10 @@
-package com.mindmap.mindnotes.sharedpreferences.logindata
+package com.mindmap.mindnotes.sharedpreferences.registerdata
 
-data class Profile(
+class Profile(
     val name: String? = "MyPrefs",
+    val namaPanjang: String? = null,
+    val nomorTelepon: String? = null,
     val alamatEmail: String? = null,
     val kataSandi: String? = null
     // Tambahkan properti lain sesuai kebutuhan aplikasi Anda
-    // Misalnya: val nomorTelepon: String? = null, val tanggalLahir: String? = null, dll.
 )
