@@ -7,6 +7,8 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.mindmap.mindnotes.nodedata.MindMapAdapter
+import com.mindmap.mindnotes.nodedata.MindMapNode
 
 
 class MainActivity : AppCompatActivity() {
@@ -36,12 +38,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onStart() {
-        super.onStart()
-    }
-
-
-
     private fun addNode(text: String) {
         val newNode = MindMapNode(text = text)
         mindMapNodes.add(newNode)
@@ -54,9 +50,5 @@ class MainActivity : AppCompatActivity() {
             mindMapNodes.removeAt(position)
             adapter.notifyItemRemoved(position)
         }
-    }
-
-    override fun onResume() {
-        super.onResume()
     }
 }

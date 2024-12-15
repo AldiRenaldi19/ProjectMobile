@@ -12,7 +12,6 @@ class HomeScreenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_home_screen)
 
         inputFileButton = findViewById(R.id.inputFileButton)
@@ -27,6 +26,4 @@ class HomeScreenActivity : AppCompatActivity() {
         super.onResume()
         inputFileButton.isEnabled = true
     }
-
-
 }

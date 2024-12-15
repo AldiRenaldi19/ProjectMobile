@@ -13,7 +13,6 @@ class MainScreenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main_screen)
 
         menujuLoginScreen = findViewById(R.id.menujuLoginScreen)
@@ -25,5 +24,9 @@ class MainScreenActivity : AppCompatActivity() {
             finish()
             Toast.makeText(this, "SELAMAT DATANG", Toast.LENGTH_SHORT).show()
         }
+    }
+    override fun onResume() {
+        super.onResume()
+        menujuLoginScreen.isEnabled = true
     }
 }

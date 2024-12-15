@@ -76,10 +76,6 @@ class RegisterActivity : AppCompatActivity() {
                 editor.putString("alamatEmail", alamatEmail)
                 editor.putString("kataSandi", kataSandi)
                 editor.apply()
-                Toast.makeText(this, "Pendaftaran Berhasil", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, LoginActivity::class.java)
-                startActivity(intent)
-                finish()
 
                 // Logika menuju ke Home Screen
                 val Intent = Intent(this, HomeScreenActivity::class.java)
@@ -95,6 +91,7 @@ class RegisterActivity : AppCompatActivity() {
 
             // Menerapkan logika untuk menavigasi ke layar login
             val sudahMemilikiAkun = sudahMemilikiAkun.toString()
+            val daftar = daftar.toString()
 
             // Logika menuju ke Login Screen
             val Intent = Intent(this, LoginActivity::class.java)

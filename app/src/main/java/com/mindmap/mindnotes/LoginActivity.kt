@@ -8,57 +8,54 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.mindmap.mindnotes.sharedpreferences.logindata.Profile
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var AlamatEmailEditText : EditText
-    private lateinit var KataSandiEditText : EditText
-    private lateinit var buttonMasuk : Button
-
-    private lateinit var daftarAkunBaruTextView: TextView
+    private lateinit var editTextAlamatEmail: EditText
+    private lateinit var editTextKataSandi: EditText
+    private lateinit var buttonbuttonMasuk: Button
+    private lateinit var daftarAkunBaru: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_login)
 
-        AlamatEmailEditText = findViewById(R.id.AlamatEmail)
-        KataSandiEditText = findViewById(R.id.KataSandi)
-        buttonMasuk = findViewById(R.id.buttonMasuk)
+        editTextAlamatEmail = findViewById(R.id.AlamatEmail)
+        editTextKataSandi = findViewById(R.id.KataSandi)
+        buttonbuttonMasuk = findViewById(R.id.buttonMasuk)
+        daftarAkunBaru = findViewById(R.id.daftarAkunBaru)
 
-        daftarAkunBaruTextView = findViewById(R.id.daftarAkunBaru)
+        buttonbuttonMasuk.setOnClickListener {
+            val alamatEmail = editTextAlamatEmail.text.toString()
+            val kataSandi = editTextKataSandi.text.toString()
+            if (alamatEmail.isEmpty() || kataSandi.isEmpty()) {
+                Toast.makeText(this, "Mohon isi semua kolom", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            } else if (kataSandi.length < 8) {
+                Toast.makeText(this, "Kata sandi minimal 8 karakter", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            } else {
+                Toast.makeText(this, "Login Berhasil Selamat Datang", Toast.LENGTH_SHORT).show()
+            }
+            val profile = Profile(alamatEmail, kataSandi)
+            val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
 
-        daftarAkunBaruTextView.setOnClickListener{
-            val intent = Intent (this, RegisterActivity::class.java)
+            editor.putString("alamatEmail", profile.alamatEmail)
+            editor.putString("kataSandi", profile.kataSandi)
+            editor.putBoolean("isLoggedIn", true)
+            editor.apply()
+
+            val intent = Intent(this, HomeScreenActivity::class.java)
             startActivity(intent)
             finish()
         }
 
-
-        buttonMasuk.setOnClickListener {
-            val AlamatEmail = AlamatEmailEditText.text.toString()
-            val KataSandi = KataSandiEditText.text.toString()
-
-            // Logika Sederhana untuk Login
-            // Di sini Anda dapat memeriksa kredensial Anda
-            // Misalnya, memeriksa apakah alamat email dan kata sandi cocok dengan data yang benar.
-            if (AlamatEmail == "admin" && KataSandi == "admin") {
-                // Simpan informasi login ke SharedPreferences
-                val sharedPreferences = getSharedPreferences("LoginPrefs", MODE_PRIVATE)
-                val editor = sharedPreferences.edit()
-                editor.putBoolean("isLoggedIn", true)
-                editor.apply()
-
-                // Jika Login Berhasil, tampilkan pesan sukses
-                val intent = Intent(this, HomeScreenActivity::class.java)
-                startActivity(intent)
-                finish()
-                Toast.makeText(this, "Login Berhasil", Toast.LENGTH_SHORT).show()
-            } else {
-                // Jika Login Gagal, tampilkan pesan kesalahan
-                Toast.makeText(this, "Login Gagal", Toast.LENGTH_SHORT).show()
-                Toast.makeText(this, "Username atau Password Salah", Toast.LENGTH_SHORT).show()
-            }
+        daftarAkunBaru.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }

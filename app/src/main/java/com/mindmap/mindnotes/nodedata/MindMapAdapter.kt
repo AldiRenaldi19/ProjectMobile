@@ -1,4 +1,4 @@
-package com.mindmap.mindnotes
+package com.mindmap.mindnotes.nodedata
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.mindmap.mindnotes.R
 
 
 class MindMapAdapter(

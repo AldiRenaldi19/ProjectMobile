@@ -1,4 +1,4 @@
-package com.mindmap.mindnotes
+package com.mindmap.mindnotes.nodedata
 
 data class MindMapNode(
     val id: String = java.util.UUID.randomUUID().toString(),
