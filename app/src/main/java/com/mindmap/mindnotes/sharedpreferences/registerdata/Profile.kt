@@ -1,10 +1,9 @@
 package com.mindmap.mindnotes.sharedpreferences.registerdata
 
-class Profile(
-    val name: String? = "MyPrefs",
-    val namaPanjang: String? = null,
-    val nomorTelepon: String? = null,
-    val alamatEmail: String? = null,
-    val kataSandi: String? = null
+data class Profile(
+    var namaPanjang: String? = null,
+    var nomorTelepon: String? = null,
+    var alamatEmail: String? = null,
+    var kataSandi: String? = null
     // Tambahkan properti lain sesuai kebutuhan aplikasi Anda
 )

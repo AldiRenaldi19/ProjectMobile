@@ -3,38 +3,30 @@ package com.mindmap.mindnotes.sharedpreferences.registerdata
 import android.content.Context
 
 class ProfilePref(context: Context) {
-    private val sharedPreferences = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-    fun saveProfile(profile: Profile) {
-        val editor = sharedPreferences.edit()
-        editor.putString("name", profile.namaPanjang)
-        editor.putString("nomorTelepon", profile.nomorTelepon)
-        editor.putString("alamatEmail", profile.alamatEmail)
-        editor.putString("kataSandi", profile.kataSandi)
-        editor.putBoolean("isLoggedIn", true)
-        editor.apply()
+    companion object {
+        const val SP_NAME_REGISTER = "profile_pref_register"
+        const val KEY_NAMA_PANJANG = "nama_panjang"
+        const val KEY_NOMOR_TELEPON = "nomor_telepon"
+        const val KEY_ALAMAT_EMAIL = "alamat_email"
+        const val KEY_KATA_SANDI = "kata_sandi"
+
+
+    }
+    val preference = context.getSharedPreferences(SP_NAME_REGISTER, Context.MODE_PRIVATE)
+    fun setProfile(profile: Profile) {
+        val prefEditor = preference.edit()
+        prefEditor.putString(KEY_NAMA_PANJANG, profile.namaPanjang)
+        prefEditor.putString(KEY_NOMOR_TELEPON, profile.nomorTelepon)
+        prefEditor.putString(KEY_ALAMAT_EMAIL, profile.alamatEmail)
+        prefEditor.putString(KEY_KATA_SANDI, profile.kataSandi)
+        prefEditor.apply()
     }
     fun getProfile(): Profile {
-        val name = sharedPreferences.getString("name", null)
-        val nomorTelepon = sharedPreferences.getString("nomorTelepon", null)
-        val alamatEmail = sharedPreferences.getString("alamatEmail", null)
-        val kataSandi = sharedPreferences.getString("kataSandi", null)
-        return Profile(name, alamatEmail, kataSandi)
-    }
-    fun clearProfile() {
-        val editor = sharedPreferences.edit()
-        editor.remove("name")
-        editor.remove("nomorTelepon")
-        editor.remove("alamatEmail")
-        editor.remove("kataSandi")
-        editor.clear()
-        editor.apply()
-    }
-    fun isLoggedIn(): Boolean {
-        return sharedPreferences.getBoolean("isLoggedIn", false)
-    }
-    fun setLoggedIn(isLoggedIn: Boolean) {
-        val editor = sharedPreferences.edit()
-        editor.putBoolean("isLoggedIn", isLoggedIn)
-        editor.apply()
+       val profile = Profile()
+        profile.namaPanjang = preference.getString(KEY_NAMA_PANJANG, null)
+        profile.nomorTelepon = preference.getString(KEY_NOMOR_TELEPON, null)
+        profile.alamatEmail = preference.getString(KEY_ALAMAT_EMAIL, null)
+        profile.kataSandi = preference.getString(KEY_KATA_SANDI, null)
+        return profile
     }
 }
