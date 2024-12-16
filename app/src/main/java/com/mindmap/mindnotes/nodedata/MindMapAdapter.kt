@@ -10,8 +10,8 @@ import com.mindmap.mindnotes.R
 
 
 class MindMapAdapter(
-    private val nodes: MutableList<MindMapNode>,
-    private val onDelete: (MindMapNode) -> Unit
+    private val nodes: MutableList<Node>,
+    private val onDelete: (Node) -> Unit
 ) : RecyclerView.Adapter<MindMapAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
