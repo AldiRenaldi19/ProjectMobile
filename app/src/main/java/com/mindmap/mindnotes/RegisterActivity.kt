@@ -42,7 +42,7 @@ class RegisterActivity : AppCompatActivity() {
             val kataSandi = editTextkataSandi.text.toString()
 
             if (validateInput(namaPanjang, nomorTelepon, alamatEmail, kataSandi)) {
-                // Simpan data pendaftaran ke ProfilePref
+                // Simpan data pendaftaran ke ProfilePref registerdata
                 val profile = Profile(
                     namaPanjang = namaPanjang,
                     nomorTelepon = nomorTelepon,
@@ -63,6 +63,7 @@ class RegisterActivity : AppCompatActivity() {
         sudahMemilikiAkun.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 

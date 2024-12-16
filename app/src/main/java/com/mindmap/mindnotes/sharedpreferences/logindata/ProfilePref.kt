@@ -3,35 +3,22 @@ package com.mindmap.mindnotes.sharedpreferences.logindata
 import android.content.Context
 
 class ProfilePref(context: Context) {
-    private val sharedPreferences = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-    fun saveProfile(profile: Profile) {
-        val editor = sharedPreferences.edit()
-        editor.putString("name", profile.name)
-        editor.putString("alamatEmail", profile.alamatEmail)
-        editor.putString("kataSandi", profile.kataSandi)
-        editor.putBoolean("isLoggedIn", true)
-        editor.apply()
+    companion object {
+        const val SP_NAME_LOGIN = "profile_pref_login"
+        const val KEY_ALAMAT_EMAIL = "alamat_email"
+        const val KEY_KATA_SANDI = "kata_sandi"
+    }
+    val preference = context.getSharedPreferences(SP_NAME_LOGIN, Context.MODE_PRIVATE)
+    fun setProfile(profile: Profile) {
+        val prefEditor = preference.edit()
+        prefEditor.putString(KEY_ALAMAT_EMAIL, profile.AlamatEmail)
+        prefEditor.putString(KEY_KATA_SANDI, profile.KataSandi)
+        prefEditor.apply()
     }
     fun getProfile(): Profile {
-        val name = sharedPreferences.getString("name",  null)
-        val alamatEmail = sharedPreferences.getString("alamatEmail", null)
-        val kataSandi = sharedPreferences.getString("kataSandi", null)
-        return Profile(name, alamatEmail, kataSandi)
-    }
-    fun clearProfile() {
-        val editor = sharedPreferences.edit()
-        editor.remove("name")
-        editor.remove("alamatEmail")
-        editor.remove("kataSandi")
-        editor.clear()
-        editor.apply()
-    }
-    fun isLoggedIn(): Boolean {
-        return sharedPreferences.getBoolean("isLoggedIn", false)
-    }
-    fun setLoggedIn(isLoggedIn: Boolean) {
-        val editor = sharedPreferences.edit()
-        editor.putBoolean("isLoggedIn", isLoggedIn)
-        editor.apply()
+        val profile = Profile()
+        profile.AlamatEmail = preference.getString(KEY_ALAMAT_EMAIL, null)
+        profile.KataSandi = preference.getString(KEY_KATA_SANDI, null)
+        return profile
     }
 }

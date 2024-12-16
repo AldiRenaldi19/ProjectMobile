@@ -9,8 +9,6 @@ class ProfilePref(context: Context) {
         const val KEY_NOMOR_TELEPON = "nomor_telepon"
         const val KEY_ALAMAT_EMAIL = "alamat_email"
         const val KEY_KATA_SANDI = "kata_sandi"
-
-
     }
     val preference = context.getSharedPreferences(SP_NAME_REGISTER, Context.MODE_PRIVATE)
     fun setProfile(profile: Profile) {
