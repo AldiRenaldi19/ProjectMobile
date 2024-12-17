@@ -3,7 +3,6 @@ package com.mindmap.mindmaplibrary
 import android.content.Context
 import android.graphics.PointF
 import android.graphics.Typeface
-import android.provider.SyncStateContract.Helpers.update
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.ScaleGestureDetector
