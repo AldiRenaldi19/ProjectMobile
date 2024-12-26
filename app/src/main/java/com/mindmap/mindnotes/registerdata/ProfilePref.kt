@@ -1,4 +1,4 @@
-package com.mindmap.mindmaplibrary.sharedpreferences.registerdata
+package com.mindmap.mindnotes.registerdata
 
 import android.content.Context
 

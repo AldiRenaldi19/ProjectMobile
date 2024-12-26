@@ -7,8 +7,8 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.mindmap.mindmaplibrary.sharedpreferences.logindata.Profile
-import com.mindmap.mindmaplibrary.sharedpreferences.logindata.ProfilePref
+import com.mindmap.mindnotes.logindata.Profile
+import com.mindmap.mindnotes.logindata.ProfilePref
 
 class LoginActivity : AppCompatActivity() {
 

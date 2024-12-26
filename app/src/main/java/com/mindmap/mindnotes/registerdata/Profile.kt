@@ -1,4 +1,4 @@
-package com.mindmap.mindmaplibrary.sharedpreferences.registerdata
+package com.mindmap.mindnotes.registerdata
 
 data class Profile(
     var namaPanjang: String? = null,

@@ -1,4 +1,4 @@
-package com.mindmap.mindmaplibrary.sharedpreferences.logindata
+package com.mindmap.mindnotes.logindata
 
 data class Profile(
     var AlamatEmail: String? = null,

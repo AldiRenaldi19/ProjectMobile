@@ -7,8 +7,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import com.mindmap.mindmaplibrary.sharedpreferences.registerdata.Profile
-import com.mindmap.mindmaplibrary.sharedpreferences.registerdata.ProfilePref
+import com.mindmap.mindnotes.registerdata.Profile
+import com.mindmap.mindnotes.registerdata.ProfilePref
 
 class RegisterActivity : AppCompatActivity() {
 
