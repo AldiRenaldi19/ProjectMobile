@@ -181,4 +181,13 @@ class MainActivity : AppCompatActivity() {
             .setBackgroundTint(getColor(R.color.error_color))
             .show()
     }
+    override fun onPause() {
+        super.onPause()
+        mindMapView.saveNodes(this)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mindMapView.loadNodes(this)
+    }
 }

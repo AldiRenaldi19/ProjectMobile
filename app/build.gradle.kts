@@ -62,4 +62,5 @@ dependencies {
     implementation(libs.viewbinding)
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.fragment.ktx)
+    implementation("com.google.code.gson:gson:2.10.1")
 }

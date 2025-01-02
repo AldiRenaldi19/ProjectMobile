@@ -29,9 +29,18 @@ class LoginActivity : AppCompatActivity() {
 
         profilePref = ProfilePref(this)
 
+        val profile = profilePref.getProfile()
+        if (profile != null) {
+            val intent = Intent(this, HomeScreenActivity::class.java)
+            startActivity(intent)
+            finish()
+            return
+        }
+
         buttonbuttonMasuk.setOnClickListener {
             val AlamatEmail = editTextAlamatEmail.text.toString()
             val KataSandi = editTextKataSandi.text.toString()
+
 
             if (validateInput(AlamatEmail, KataSandi)) {
                 // Simpan data login ke ProfilePref logindata

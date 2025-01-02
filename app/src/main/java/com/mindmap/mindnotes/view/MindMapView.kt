@@ -16,8 +16,11 @@ import kotlin.math.cos
 import kotlin.math.sin
 import android.graphics.RectF
 import android.graphics.PointF
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.mindmap.mindnotes.model.Connection
 import com.mindmap.mindnotes.model.MindMapNode
+import java.io.File
 
 class MindMapView @JvmOverloads constructor(
     context: Context,
@@ -430,5 +433,24 @@ class MindMapView @JvmOverloads constructor(
 
     fun setOnNodeDeleteListener(listener: (MindMapNode) -> Unit) {
         onNodeDeleteListener = listener
+    }
+    fun saveNodes(context: Context) {
+        val gson = Gson()
+        val json = gson.toJson(nodes)
+        context.openFileOutput("mindmap_data.json", Context.MODE_PRIVATE).use {
+            it.write(json.toByteArray())
+        }
+    }
+    fun loadNodes(context: Context) {
+        val file = File(context.filesDir, "mindmap_data.json")
+        if (file.exists()) {
+            val json = file.readText()
+            val gson = Gson()
+            val nodeType = object : TypeToken<List<MindMapNode>>() {}.type
+            val loadedNodes = gson.fromJson(json, Array<MindMapNode>::class.java)
+            nodes.clear()
+            nodes.addAll(loadedNodes)
+            invalidate()
+        }
     }
 }
