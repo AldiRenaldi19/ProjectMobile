@@ -16,7 +16,7 @@
 ---
 
 ### Introduction
-Mind Notes is an application that is made to make it easier for users to take daily notes in all activities. This is an application made for the first time by Aldi Renaldi students with NIM (312310812) as a midterm exam project until the final semester exam.
+Mind Notes is an application that is made to make it easier for users to take daily notes in all activities. This is an application made for the first time by Aldi Renaldi students with NIM (312310812) as a project final semester exam.
 
 ---
 
